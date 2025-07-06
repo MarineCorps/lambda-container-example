@@ -52,6 +52,14 @@ def lambda_handler(event, context):
     result, pred_time = inference_model(batch_imgs)
     total_time = time.time() - total_start
 
+    #awsCloudwatch에서 출력값을 보기위해 print함수 추가
+    print({
+        'model_name': model_name,
+        'total_time': total_time,
+        'pred_time': pred_time,
+        'result': result[:1]  # 너무 길면 일부만 출력
+    })
+
     return {
         'model_name': model_name,
         'total_time': total_time,
