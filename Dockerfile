@@ -8,7 +8,7 @@ RUN /var/lang/bin/python3.8 -m pip install --upgrade pip
 RUN yum install git -y
 
 # 미리 구성된 github clone
-RUN git clone https://github.com/workdd/lambda-container-example
+RUN git clone https://github.com/MarineCorps/lambda-container-example
 
 # install packages
 RUN pip install -r lambda-container-example/requirements.txt
