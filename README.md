@@ -11,3 +11,7 @@ aws ecr get-login-password --region us-west-2 | docker login --username AWS --pa
 
 docker push $ACCOUNT_ID.dkr.ecr.ap-northeast-2.amazonaws.com/lambda-ensemble
 ```
+
+
+
+https://github.com/workdd/lambda-container-example 에있는 프로젝트를 제 실습환경에 맞춰 변경했습니다.
