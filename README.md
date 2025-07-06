@@ -7,7 +7,7 @@ echo "export ACCOUNT_ID=${ACCOUNT_ID}" | tee -a ~/.bash_profile
 
 docker tag lambda-ensemble $ACCOUNT_ID.dkr.ecr.ap-northeast-2.amazonaws.com/lambda-ensemble
 
-aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.ap-northeast-2.amazonaws.com
+aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.ap-northeast-2.amazonaws.com
 
 docker push $ACCOUNT_ID.dkr.ecr.ap-northeast-2.amazonaws.com/lambda-ensemble
 ```
